@@ -4,7 +4,7 @@ on:
     branches: [ '*' ]
     tags: [ '*' ]
   pull_request:
-    branches: [ main ]
+    branches: [ * ]
   schedule:
     # Run automatically at 8AM PST Monday-Friday
     - cron: '0 15 * * 1-5'
@@ -48,7 +48,7 @@ jobs:
 
       # only send coverage for PRs and branch updates
       - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@main
+        uses: SonarSource/sonarcloud-github-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
