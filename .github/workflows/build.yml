@@ -1,4 +1,4 @@
-name: Build
+name: Build #copiado de https://docs.sonarcloud.io/enriching/test-coverage/python-test-coverage/
 on:
   push:
     branches:
